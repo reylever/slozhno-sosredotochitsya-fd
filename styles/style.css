@@ -30,8 +30,6 @@
   outline-offset: 1px;
 }
 
-/* HEADER */
-
 .header {
   position: relative;
   display: grid;
@@ -143,8 +141,6 @@
   background-color: rgba(var(--accent-color, 255, 0, 112));
 }
 
-/* MAIN */
-
 .main {
   position: relative;
   display: flex;
@@ -154,16 +150,14 @@
   padding-block: 40px;
 }
 
-/* Убраны классы .stack и их производные */
-.section,
-.section__content,
-.section__block {
+.stack {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.section__block {
+.section-gallery,
+.section__content__block {
   gap: 10px;
 }
 
@@ -173,7 +167,9 @@
   font-size: inherit;
 }
 
-/* GALLERY */
+.section__subtitle {
+  font-weight: 400;
+}
 
 .gallery {
   display: grid;
@@ -187,8 +183,6 @@
   inline-size: 100%;
   block-size: 100%;
 }
-
-/* FOOTER */
 
 .footer {
   position: relative;
@@ -260,27 +254,27 @@
     gap: 20px;
   }
 
-  .gallery img:first-child {
+  .gallery__image-sunset {
     grid-column: 1 / span 2;
     grid-row: 1 / span 1;
   }
 
-  .gallery img:nth-child(2) {
+  .gallery__image-ice-cream {
     grid-column: 3 / span 1;
     grid-row: 1 / span 2;
   }
 
-  .gallery img:nth-child(3) {
+  .gallery__image-tape {
     grid-column: 1 / span 1;
     grid-row: 2 / span 3;
   }
 
-  .gallery img:nth-child(4) {
+  .gallery__image-books {
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
   }
 
-  .gallery img:last-child {
+  .gallery__image-street {
     grid-column: 2 / span 2;
     grid-row: 3 / span 2;
   }
@@ -307,7 +301,7 @@
 
   .header__title {
     margin-block-end: 114px;
-    font-size: 157px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__description {
@@ -332,6 +326,6 @@
   }
 
   .footer__title {
-    font-size: 157px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }

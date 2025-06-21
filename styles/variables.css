@@ -3,22 +3,22 @@
   и их переопределение под различные устройства
 */
 :root {
-  --title-color: 219, 0, 255;
-  --text-color: 241, 178, 206;
   --bg-color: 0, 0, 40;
+  --title-color: 219, 0, 255;
   --title-decor-color: var(--bg-color);
-  --decoration-color: var(--accent-color);
+  --text-color: 241, 178, 206;
   --accent-color: 255, 0, 112;
   --cover-image: url("../images/cover-image-dark.png");
-  --decoration-visibility: visible;
   --section-title-color: var(--accent-color);
+  --decoration-color: var(--accent-color);
   --button-color: var(--accent-color);
-  --page-padding: 10px;
+  --decoration-visibility: visible;
 
   --font-family: "IBM Plex Mono", sans-serif;
   --font-size: 18px;
   --line-height: 1.3;
-  
+
+  --page-padding: 10px;
 }
 
 @media (min-width: 768px) {
