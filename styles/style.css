@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
   color: rgba(var(--text-color, 241, 178, 206));
-  font-family: var(--font-family, sans-serif);
+  font-family: var(--font-family, monospace);
   font-size: var(--font-size, 18px);
   line-height: var(--line-height, 1.3);
   background-image: var(--cover-image, url("../images/cover-image-dark.png"));
@@ -36,6 +36,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
   align-items: start;
+  height: 100vh;
   min-height: 668px;
   padding-inline: var(--page-padding, 10px);
   padding-block: 75px 65px;
@@ -125,6 +126,10 @@
   block-size: 9px;
 }
 
+.header__title {
+  max-inline-size: 100px;
+}
+
 .header__title,
 .footer__title {
   margin-block-end: 55px;
@@ -190,6 +195,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
   min-height: 668px;
   padding-inline: var(--page-padding, 10px);
 }
@@ -202,11 +208,6 @@
 @media (min-width: 768px) {
   .header {
     padding-block: 192px 183px;
-    min-block-size: 1024px;
-  }
-
-  .header__br {
-    display: none;
   }
 
   .header__theme-menu {
@@ -214,9 +215,11 @@
   }
 
   .header__title {
+    max-inline-size: none;
     position: relative;
     margin-block-end: 162px;
     inset-inline-start: calc(-1 * var(--page-padding, 10px));
+    max-block-size: 100px;
   }
 
   .header__description {
@@ -278,10 +281,6 @@
     grid-column: 2 / span 2;
     grid-row: 3 / span 2;
   }
-
-  .footer {
-    min-block-size: 1024px;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -300,6 +299,7 @@
   }
 
   .header__title {
+    max-inline-size: none;
     margin-block-end: 114px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
